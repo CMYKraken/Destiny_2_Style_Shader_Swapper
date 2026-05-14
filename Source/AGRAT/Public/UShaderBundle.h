@@ -8,16 +8,14 @@
  * 
  */
 UCLASS(Blueprintable)
-class AGRAT_API UShaderBundle : public UObject
+class AGRAT_API UShaderBundle : public UDataAsset
 {
 	GENERATED_BODY()
 public:
+	UPROPERTY(EditAnywhere,BlueprintReadOnly)
 	TArray<UMaterial*> Shaders;
 public:
 	UShaderBundle();
 	UShaderBundle(TArray<UMaterial*> inArray);
 	~UShaderBundle();
-
-	UFUNCTION(BlueprintCallable)
-	TArray<UMaterial*> GetShaders();
 };

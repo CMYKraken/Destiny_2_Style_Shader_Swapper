@@ -15,7 +15,3 @@ UShaderBundle::~UShaderBundle()
 {
 }
 
-TArray<UMaterial*> UShaderBundle::GetShaders()
-{
-	return Shaders;
-}
