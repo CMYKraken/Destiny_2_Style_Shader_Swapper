@@ -7,7 +7,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class AGRAT_API UShaderBundle : public UObject
 {
 	GENERATED_BODY()
@@ -17,4 +17,7 @@ public:
 	UShaderBundle();
 	UShaderBundle(TArray<UMaterial*> inArray);
 	~UShaderBundle();
+
+	UFUNCTION(BlueprintCallable)
+	TArray<UMaterial*> GetShaders();
 };

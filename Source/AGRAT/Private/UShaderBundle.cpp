@@ -14,3 +14,8 @@ UShaderBundle::UShaderBundle(TArray<UMaterial*> inArray) {
 UShaderBundle::~UShaderBundle()
 {
 }
+
+TArray<UMaterial*> UShaderBundle::GetShaders()
+{
+	return Shaders;
+}
