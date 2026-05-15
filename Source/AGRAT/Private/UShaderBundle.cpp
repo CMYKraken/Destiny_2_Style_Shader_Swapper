@@ -6,9 +6,9 @@
 
 UShaderBundle::UShaderBundle()
 {
-	Shaders = TArray<UMaterial*>();
+	Shaders = TArray<UMaterialInstance*>();
 }
-UShaderBundle::UShaderBundle(TArray<UMaterial*> inArray) {
+UShaderBundle::UShaderBundle(TArray<UMaterialInstance*> inArray) {
 	Shaders = inArray;
 }
 UShaderBundle::~UShaderBundle()

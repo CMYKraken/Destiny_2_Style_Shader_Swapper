@@ -13,9 +13,9 @@ class AGRAT_API UShaderBundle : public UDataAsset
 	GENERATED_BODY()
 public:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly)
-	TArray<UMaterial*> Shaders;
+	TArray<UMaterialInstance*> Shaders;
 public:
 	UShaderBundle();
-	UShaderBundle(TArray<UMaterial*> inArray);
+	UShaderBundle(TArray<UMaterialInstance*> inArray);
 	~UShaderBundle();
 };
