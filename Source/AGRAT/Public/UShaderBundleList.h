@@ -4,21 +4,32 @@
 
 #include "CoreMinimal.h"
 #include "UShaderBundle.h"
-#include "UObject/Object.h"
+#include "AssetRegistry/IAssetRegistry.h"
+#include "AssetRegistry/AssetRegistryModule.h"
+#include "Components/ActorComponent.h"
 #include "UShaderBundleList.generated.h"
 
 /**
  * 
  */
-UCLASS()
-class AGRAT_API UShaderBundleList : public UObject
+UCLASS(Blueprintable)
+class AGRAT_API UShaderBundleList : public UActorComponent
 {
 	GENERATED_BODY()
+
+private:
+	void PopulateShaderList();
+	void ClearShaderList();
 
 public:
 	UShaderBundleList();
 	~UShaderBundleList();
 
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(EditAnywhere,BlueprintReadOnly)
 	TArray<UShaderBundle*> ShaderList;
+
+	UFUNCTION(BlueprintCallable)
+	UShaderBundle* GetShaderBundleAt(int index);
+	UFUNCTION(BlueprintCallable)
+	void ReloadShaderList();
 };
