@@ -19,7 +19,7 @@ class AGRAT_API UShaderBundleList : public UActorComponent
 
 private:
 	void PopulateShaderList();
-	void ClearShaderList();
+	
 
 public:
 	UShaderBundleList();
@@ -32,4 +32,6 @@ public:
 	UShaderBundle* GetShaderBundleAt(int index);
 	UFUNCTION(BlueprintCallable)
 	void ReloadShaderList();
+	UFUNCTION(BlueprintCallable)
+	void ClearShaderList();
 };
